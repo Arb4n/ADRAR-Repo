@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = C:\\Users\\Hal\\Downloads\\GitHal\\10-depot-remote
+	fetch = +refs/heads/*:refs/remotes/origin/*

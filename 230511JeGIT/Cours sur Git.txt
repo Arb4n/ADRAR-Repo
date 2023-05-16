@@ -1,0 +1,256 @@
+
+Définition de GIT
+Les besoins de Linus Torvalds 
+Les différents hébergeurs de code informatique
+Découverte de la CLI (Command-Line Interface) de Git
+Création d’un compte sur github
+Création du premier repository
+Clônage du dépôt Github sur notre repository local
+Les sauvegardes (commit)
+Les remises (Stash)
+Le système de branches
+Interaction avec un repository distant
+Télécharger les données dans le dépôt local
+Envoyer des données locales sur le dépôt distant
+La fusion de branches (merge)
+Résolution de problèmes Git
+Le markdown (.md, .markdown)
+Sommaire
+Git
+
+Git est: 
+un outil de gestion de projets et de versions collaboratif
+est un logiciel libre
+un logiciel de gestion de versions décentralisé (Peer-to-Peer)
+Définition
+Git
+
+Il est :
+le créateur du noyau Linux
+le créateur de Git
+le créateur Subsurface (logiciel d’enregistrement et de planification des plongées)
+
+
+La création de Git est due au retrait de la version gratuite de BitKeeper dont il se servait pour Linux.
+Les besoins de Linus Torvalds
+Git
+
+Les hébergeurs de code informatique
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Découverte de la CLI - Installation
+Git
+
+Première phase:
+Créer un dossier à l’emplacement de votre choix
+Vous y rendre via la CLI
+Initialiser le dépôt local avec la commande git init
+Découverte de la CLI - Configuration
+Git
+
+Découverte de la CLI - Création du compte
+Git
+
+Découverte de la CLI - Création du repository
+Git
+
+Découverte de la CLI - Création du repository
+Git
+
+Découverte de la CLI - Création du repository
+Git
+
+Copier le lien d’accès à vôtre dépôt distant
+Découverte de la CLI - Clonage du dépôt Github sur le repository local
+Git
+
+Tapez: git remote add  [alias_desiré] https://github.com/votre_url.git
+Vous pouvez retrouver tous vos alias créés avec la commande git remote -v
+Découverte de la CLI - Clonage du dépôt Github sur le repository local
+Git
+
+Les sauvegardes (commit)
+Git
+
+Pour ajouter un élément dans la phase de stage, vous devez utiliser la commande suivante : git add [nom_fichier.extension | .]
+
+Pour effectuer un commit, vous devez utiliser celle-ci : git commit [-m “Intitulé de votre commit / Les modifications apportées…”]
+
+NB: Vous n’êtes pas obligés de mettre un message pour que le commit s’effectue !
+
+
+Testez en créant un nouveau fichier test.txt dans votre répertoire de travail
+Les sauvegardes (commit)
+Git
+
+Pour ajouter plusieurs éléments à la phase de stage, le paramètre va légèrement changer : git add * OU git add -A
+
+Concernant le commit, il faudra faire : git commit -am “Énoncer les changements divers”
+
+Pour supprimer un fichier, il y a : git rm nom_fichier.extension
+NB: Il ne faut pas oublier d’effectuer un nouveau commit après la suppression
+
+Créez de nouveaux fichiers et manipulez ces nouvelles commandes 
+Les sauvegardes (commit)
+Git
+
+Pour voir l’état des fichiers, tapez git status
+
+Pour créer une remise, vous devez en premier lieu :
+vous devez ajouter les nouveaux fichiers et modifications avec git add *
+puis tapez git stash
+Pour vérifier que tout s’est bien passé, consultez votre dossier local, ce que vous avez placé en remise n’est plus visible 
+
+Pour consulter vos remises: git stash list
+
+git stash apply [stash@{id_remise}] 
+Si aucun id de remise n’est précisé, toutes les remises se verront enregistrées exécutées
+Les remises (stash)
+Git
+
+git stash [stash@{id_remise}] drop
+Si aucun id de remise n’est précisé, toutes les remises seront supprimées
+Les remises (stash)
+Git
+
+Les branches sont comme des “dossiers virtuels”
+Les branches
+Git
+
+Pour afficher les branches git branch
+NB: S’il y a un astérisque à côté du nom de votre branche, c’est que vous êtes positionné sur celle-ci en ce moment
+
+Pour créer une nouvelle branche git branch nom_branche
+
+Pour basculer vers une autre branche git checkout nom_branche
+
+Les branches
+Git
+
+Assurez vous d’avoir un dossier dans lequel :
+git a été initialisé
+la connexion entre le repository et le répertoire de travail a bien été effectuée
+
+Après cela, tapez git pull [alias_desiré] 
+Interaction avec un repository distant - Télécharger les données dans le dépôt local
+Git
+
+Après avoir ajoutés et sauvegardés vos fichiers, tapez git push [alias_desiré] nom_branche
+NB: Par défaut, le nom de votre branche doit être master
+NB: Si vous avez une autre branche et que vous voulez tester, tapez git checkout nom_branche et relancez le push, pas la peine de la créer sur Github, la branche se créera toute seule !
+
+Pour récupérer le contenu d’une branche: 
+git fetch [remote_desiré] <srcBranch>:<destBranch>
+Interaction avec un repository distant - Téléverser les données sur le dépôt distant
+Git
+NB: Après avoir fait un fetch, il faut effectuer un checkout, Git isole le contenu que vous avez fetché du contenu qui se trouve dans votre répertoire local.
+
+Pour effectuer un merge, assurez vous d’être sur la bonne branche au départ
+Vous devez vous situer sur la branche qui va recevoir la fusion
+Dès que c’est bon, tapez git merge nom_branche_recevant nom_branche_envoyant 
+La fusion de branches (merge)
+Git
+
+Hard
+Medium
+Soft
+Résolution de problèmes
+Git
+
+git reset id_commit –hard : cette commande n’est à utiliser qu’en dernier recours, car tous les commits suivants seront perdus
+git reset [id_commit] –mixed : permet de revenir juste après le dernier commit ou juste après le commit spécifié. Ce reset ne supprime pas vos modifications en cours. Il va créer une en-tête HEAD détachée.
+git reset id_commit –soft : permet de voir le code a un instant donné sans modifier ni supprimer de fichiers. Aucune HEAD détachée ne sera créée.
+Résolution de problèmes
+Git
+
+en italique
+*texte*
+_texte_
+en gras
+**texte**
+__texte__
+ un titre de niveau 1
+# Titre 1
+Titre 1
+=========
+un titre de niveau 2
+## Titre 2
+Titre 2
+—------
+un lien
+[Lien](https://votrelien.fr)
+une image
+![Image](http://site.fr/image.png)
+Pour écrire :			      (Syntaxe 1)		               (Syntaxe 2)
+Le markdown (.md, .markdown)
+Git
+
+Le markdown (.md, .markdown)
+un bloc de citation
+> Bloc de citation
+une liste à puces
+* Item 1
+* Item 2
+* Item 3
+- Item 1
+- Item 2
+- Item 3
+une énumération
+1. Item 1
+2. Item 2
+3. Item 3
+1) Item 1
+2) Item 2
+3) Item 3
+une rupture thématique
+__
+***
+du code en ligne
+`Code en ligne`
+Pour écrire :			      (Syntaxe 1)		           (Syntaxe 2)
+
+Le markdown (.md, .markdown)
+un bloc de code en ligne
+```
+Texte sur plusieurs lignes
+```
+    (4 espaces)
+Texte sur plusieurs lignes
+    (4 espaces)
+Pour écrire :			      (Syntaxe 1)		           (Syntaxe 2)
