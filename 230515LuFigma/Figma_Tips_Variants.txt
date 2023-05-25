@@ -1,0 +1,6 @@
+Tips: pour générer un variant, permettant de faire un changement d'état entre deux éléments (boutons, carousels, ...), voici la marche à suivre:
+Créez le component que vous allez devoir faire varier (cf. capture 1)
+Ensuite, faites un clic droit puis "Main component > Add variant" (cf. capture 2)
+Modifiez le design de l'un des deux variants puis rendez-vous dans l'onglet "Prototype", retournez sur vos variants et faites glisser les flèches à partir du "+" du premier variant jusqu'au second variant et du vice versa (cf. capture 3)
+
+Une fois cela fait, vous retrouverez votre component dans l'onglet "Assets" comme tous les autres, faites le glisser dans votre projet et testez ! (cf. capture 4 et capture 5)
